@@ -33,7 +33,7 @@ const MapboxGLMap = () => {
           id: 'polygons',
           type: 'fill',
           source: 'kommune',
-          paint: {
+          'paint': {
           'fill-color': '#088',
           'fill-outline-color': '#800',
           'fill-opacity': 1.0
