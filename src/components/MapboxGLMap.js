@@ -26,11 +26,11 @@ const MapboxGLMap = () => {
       map.on("load", () => {
         setMap(map);
         map.resize();
-        map.addSource(geo)
+        map.addSource('kommune',geo)
         map.addLayer({
-          'id': 'maine',
+          'id': '',
           'type': 'fill',
-          'source': 'maine',
+          'source': 'kommune',
           'layout': {},
           'paint': {
           'fill-color': '#088',
