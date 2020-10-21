@@ -38,7 +38,6 @@ const MapboxGLMap = () => {
           'fill-color': '#088',
           'fill-opacity': 0.8
           },
-          'filter': ['==', '$type', 'Polygon']  
           });
       });
     };
