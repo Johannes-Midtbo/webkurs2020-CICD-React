@@ -30,11 +30,10 @@ const MapboxGLMap = () => {
         type: 'geojson',
         data: './letsDoe.geojson'});
         map.addLayer({
-          'id': 'mooo',
-          'type': 'fill',
-          'source': 'kommune',
-          'layout': {},
-          'paint': {
+          id: 'polygons',
+          type: 'fill',
+          source: 'kommune',
+          paint: {
           'fill-color': '#088',
           'fill-opacity': 0.8
           },
