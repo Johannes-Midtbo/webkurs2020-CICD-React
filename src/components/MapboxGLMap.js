@@ -20,7 +20,7 @@ const MapboxGLMap = () => {
         container: mapContainer.current,
         style: "mapbox://styles/mapbox/streets-v11", // stylesheet location
         center: [10.408773,63.422091],
-        zoom: 10
+        zoom: 8
       });
 
       map.on("load", () => {
@@ -35,7 +35,8 @@ const MapboxGLMap = () => {
           source: 'kommune',
           paint: {
           'fill-color': '#088',
-          'fill-opacity': 0.8
+          'fill-outline-color': '#800',
+          'fill-opacity': 1.0
           },
           });
       });
