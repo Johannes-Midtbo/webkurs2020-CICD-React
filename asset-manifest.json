@@ -1,25 +1,26 @@
 {
   "files": {
     "main.css": "/webkurs2020-CICD-React/static/css/main.69eda509.chunk.css",
-    "main.js": "/webkurs2020-CICD-React/static/js/main.7617134a.chunk.js",
-    "main.js.map": "/webkurs2020-CICD-React/static/js/main.7617134a.chunk.js.map",
+    "main.js": "/webkurs2020-CICD-React/static/js/main.e8a030a6.chunk.js",
+    "main.js.map": "/webkurs2020-CICD-React/static/js/main.e8a030a6.chunk.js.map",
     "runtime-main.js": "/webkurs2020-CICD-React/static/js/runtime-main.89e14c0b.js",
     "runtime-main.js.map": "/webkurs2020-CICD-React/static/js/runtime-main.89e14c0b.js.map",
     "static/css/2.0a5b19c0.chunk.css": "/webkurs2020-CICD-React/static/css/2.0a5b19c0.chunk.css",
-    "static/js/2.16ab8709.chunk.js": "/webkurs2020-CICD-React/static/js/2.16ab8709.chunk.js",
-    "static/js/2.16ab8709.chunk.js.map": "/webkurs2020-CICD-React/static/js/2.16ab8709.chunk.js.map",
+    "static/js/2.23781885.chunk.js": "/webkurs2020-CICD-React/static/js/2.23781885.chunk.js",
+    "static/js/2.23781885.chunk.js.map": "/webkurs2020-CICD-React/static/js/2.23781885.chunk.js.map",
     "index.html": "/webkurs2020-CICD-React/index.html",
-    "precache-manifest.5140461e13e3cc0a1ca528fbc4f6d726.js": "/webkurs2020-CICD-React/precache-manifest.5140461e13e3cc0a1ca528fbc4f6d726.js",
+    "precache-manifest.82fc697663a02538d509c5ad2e2ff6ae.js": "/webkurs2020-CICD-React/precache-manifest.82fc697663a02538d509c5ad2e2ff6ae.js",
     "service-worker.js": "/webkurs2020-CICD-React/service-worker.js",
     "static/css/2.0a5b19c0.chunk.css.map": "/webkurs2020-CICD-React/static/css/2.0a5b19c0.chunk.css.map",
     "static/css/main.69eda509.chunk.css.map": "/webkurs2020-CICD-React/static/css/main.69eda509.chunk.css.map",
-    "static/js/2.16ab8709.chunk.js.LICENSE.txt": "/webkurs2020-CICD-React/static/js/2.16ab8709.chunk.js.LICENSE.txt"
+    "static/js/2.23781885.chunk.js.LICENSE.txt": "/webkurs2020-CICD-React/static/js/2.23781885.chunk.js.LICENSE.txt",
+    "static/media/letsDoe.geojson": "/webkurs2020-CICD-React/static/media/letsDoe.2235a41f.geojson"
   },
   "entrypoints": [
     "static/js/runtime-main.89e14c0b.js",
     "static/css/2.0a5b19c0.chunk.css",
-    "static/js/2.16ab8709.chunk.js",
+    "static/js/2.23781885.chunk.js",
     "static/css/main.69eda509.chunk.css",
-    "static/js/main.7617134a.chunk.js"
+    "static/js/main.e8a030a6.chunk.js"
   ]
 }
