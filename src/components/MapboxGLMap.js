@@ -39,7 +39,7 @@ const MapboxGLMap = () => {
           'fill-opacity': 1.0
           },
           });
-          console.log(5 + 6);
+          console.log(5 + 88);
       });
     };
 
