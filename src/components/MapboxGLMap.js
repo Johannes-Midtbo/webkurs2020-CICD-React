@@ -26,7 +26,7 @@ const MapboxGLMap = () => {
       map.on("load", () => {
         setMap(map);
         map.resize();
-        map.addSource('kommune',geo)
+        map.addSource('kommune',geo);
         map.addLayer({
           'id': '',
           'type': 'fill',
@@ -35,7 +35,8 @@ const MapboxGLMap = () => {
           'paint': {
           'fill-color': '#088',
           'fill-opacity': 0.8
-          }
+          },
+          'filter': ['==', '$type', 'Polygon']  
           });
       });
     };
