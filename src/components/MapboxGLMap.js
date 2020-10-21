@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
-import geo from ".../letsDoe.geojson";
+import geo from "./letsDoe.geojson";
 
 
 const styles = {
@@ -40,7 +40,7 @@ const MapboxGLMap = () => {
           'fill-opacity': 1.0
           },
           });
-          console.log(5);
+          console.log(6);
       });
     };
 
