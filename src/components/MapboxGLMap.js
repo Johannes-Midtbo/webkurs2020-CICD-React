@@ -28,7 +28,7 @@ const MapboxGLMap = () => {
         map.resize();
         map.addSource('kommune',{
         type: 'geojson',
-        data: './src/components/LetsDoe.geojson'});
+        data: './letsDoe.geojson'});
         map.addLayer({
           id: 'polygons',
           type: 'fill',
