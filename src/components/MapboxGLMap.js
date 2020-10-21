@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
-import geo from "./letsDoe.geojson";
+
 
 const styles = {
   width: "100%",
@@ -20,15 +20,17 @@ const MapboxGLMap = () => {
         container: mapContainer.current,
         style: "mapbox://styles/mapbox/streets-v11", // stylesheet location
         center: [10.408773,63.422091],
-        zoom: 10
+        zoom: 5
       });
 
       map.on("load", () => {
         setMap(map);
         map.resize();
-        map.addSource('kommune',geo);
+        map.addSource('kommune',{
+        type: 'geojson',
+        data: "./letsDoe.geojson"});
         map.addLayer({
-          'id': '',
+          'id': 'mooo',
           'type': 'fill',
           'source': 'kommune',
           'layout': {},
