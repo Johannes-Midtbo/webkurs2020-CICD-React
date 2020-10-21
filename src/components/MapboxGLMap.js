@@ -20,7 +20,7 @@ const MapboxGLMap = () => {
         container: mapContainer.current,
         style: "mapbox://styles/mapbox/streets-v11", // stylesheet location
         center: [10.408773,63.422091],
-        zoom: 5
+        zoom: 10
       });
 
       map.on("load", () => {
@@ -28,7 +28,7 @@ const MapboxGLMap = () => {
         map.resize();
         map.addSource('kommune',{
         type: 'geojson',
-        data: "./letsDoe.geojson"});
+        data: './letsDoe.geojson'});
         map.addLayer({
           'id': 'mooo',
           'type': 'fill',
