@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
+import geo from "./letsDoe.geojson";
 
 const styles = {
   width: "100%",
@@ -25,6 +26,17 @@ const MapboxGLMap = () => {
       map.on("load", () => {
         setMap(map);
         map.resize();
+        map.addSource(geo)
+        map.addLayer({
+          'id': 'maine',
+          'type': 'fill',
+          'source': 'maine',
+          'layout': {},
+          'paint': {
+          'fill-color': '#088',
+          'fill-opacity': 0.8
+          }
+          });
       });
     };
 
