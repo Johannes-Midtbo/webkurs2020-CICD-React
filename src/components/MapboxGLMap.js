@@ -35,7 +35,7 @@ const MapboxGLMap = () => {
           type: 'fill',
           source: 'kommune',
           'paint': {
-          'fill-outline-color': '#00000',
+          'fill-outline-color': '#000000',
           'fill-opacity': 1.0
           },
           });
