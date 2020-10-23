@@ -32,11 +32,11 @@ const MapboxGLMap = () => {
         data: geo});
         map.addLayer({
           id: 'polygons',
-          type: 'outline',
+          type: 'line',
           source: 'kommune',
           'paint': {
-          'outline-color': '#000000',
-          'outline-opacity': 1.0
+          'line-color': '#000000',
+          'line-opacity': 1.0
           },
           });
           console.log(6);
