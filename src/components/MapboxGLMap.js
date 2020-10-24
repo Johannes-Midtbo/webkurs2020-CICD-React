@@ -3,6 +3,7 @@ import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import geo from "./TroUhav.geojson";
 import center from "./Center.geojson";
+import lebels from "./letsDoe.geojson";
 
 
 const styles = {
@@ -33,8 +34,11 @@ const MapboxGLMap = () => {
         setMap(map);
         map.resize();
         map.addSource('kommune',{
-        type: 'geojson',
-        data: geo});
+          type: 'geojson',
+          data: geo});
+        map.addSource('label',{
+          type: 'geojson',
+          data: labels});
         map.addSource('pop', {
           type: 'geojson',
           data: center});
@@ -53,7 +57,11 @@ const MapboxGLMap = () => {
           type: "circle",
           source: "pop",
           paint: {
-              //'circle-pitch-scale': 'map',
+            "circle-opacity": ["case",
+            ["boolean", ["feature-state", "hover"], false],
+            0.2,
+            0.8
+           ],
               'circle-radius':['/',['sqrt',['/', ['get', 'pers'],3.14]],8],
               'circle-color': '#ff0000'
           }
@@ -72,9 +80,20 @@ const MapboxGLMap = () => {
               "text-halo-width": 2,
               "text-halo-blur": 0,
           }
-      });
+          
+        });
 
-          console.log(6);
+        map.on('click', 'kommune-pop', function(e) {
+            new mapboxgl.Popup()
+            .setLngLat(e.lngLat)
+            .setHTML("Personer i " + e.features[0].properties.navn+":  "+e.features[0].properties.pers)
+            .addTo(map);
+        });
+        
+        map.on('mouseenter', 'kommune-pop', function() {
+          map.getCanvas().style.cursor = 'pointer';
+        });
+        
       });
     };
 
