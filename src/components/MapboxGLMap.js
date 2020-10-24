@@ -59,7 +59,7 @@ const MapboxGLMap = () => {
           type: "circle",
           source: "kommune",
           paint: {
-              'circle-radius':"{krimStar}" ,
+              'circle-radius':"krimStar" ,
               'circle-color': '#ff0000'
           }
       });
