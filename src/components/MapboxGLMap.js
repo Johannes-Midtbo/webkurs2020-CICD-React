@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import geo from "./letsDoe.geojson";
+import center from "./Center.geojson";
 
 
 const styles = {
@@ -30,6 +31,9 @@ const MapboxGLMap = () => {
         map.addSource('kommune',{
         type: 'geojson',
         data: geo});
+        map.addSource('krim', {
+          type: 'geojson',
+          data: center});
         map.addLayer({
           id: 'polygons',
           type: 'line',
@@ -57,12 +61,12 @@ const MapboxGLMap = () => {
         map.addLayer({
           id: "kommune-krim",
           type: "circle",
-          source: "kommune",
+          source: "krim",
           layout: {
-            'circle-placement': "point"
+            'circle': "point"
         },
           paint: {
-              'circle-radius':['get','krimStar'] ,
+              'circle-radius':5,
               'circle-color': '#ff0000'
           }
       });
