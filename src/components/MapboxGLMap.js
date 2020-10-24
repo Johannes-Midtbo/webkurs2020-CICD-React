@@ -11,6 +11,10 @@ const styles = {
   position: "absolute"
 };
 
+function rad(persons){
+  return persons/100
+}
+
 const MapboxGLMap = () => {
   const [map, setMap] = useState(null);
   const mapContainer = useRef(null);
@@ -42,29 +46,31 @@ const MapboxGLMap = () => {
           'line-color': '#000000',
           'line-opacity': 1.0
           },
-          });
-          map.addLayer({
-            id: "kommune-navn",
-            type: "symbol",
-            source: "kommune",
-            layout: {
-                "text-field": "{navn}\n",
-                "text-font": ["Open Sans Regular"],
-                "text-size": 12,
-                'symbol-placement': "point"
-            },
-            paint: {
-                "text-halo-width": 2,
-                "text-halo-blur": 0,
-            }
         });
+        
         map.addLayer({
           id: "kommune-pop",
           type: "circle",
           source: "pop",
           paint: {
-              'circle-radius':['get', 'pers'],
+              //'circle-pitch-scale': 'map',
+              'circle-radius':['/',['sqrt',['/', ['get', 'pers'],3.14]],8],
               'circle-color': '#ff0000'
+          }
+        });
+        map.addLayer({
+          id: "kommune-navn",
+          type: "symbol",
+          source: "kommune",
+          layout: {
+              "text-field": "{navn}",
+              "text-font": ["Open Sans Regular"],
+              "text-size": 12,
+              'symbol-placement': "point"
+          },
+          paint: {
+              "text-halo-width": 2,
+              "text-halo-blur": 0,
           }
       });
 
