@@ -45,7 +45,6 @@ const MapboxGLMap = () => {
             source: "kommune",
             layout: {
                 "text-field": "{name}\n",
-                "text-font": ["Droid Sans Regular"],
                 "text-size": 12,
                 'symbol-placement': "point"
             },
