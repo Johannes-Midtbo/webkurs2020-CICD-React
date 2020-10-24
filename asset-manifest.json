@@ -1,26 +1,27 @@
 {
   "files": {
     "main.css": "/webkurs2020-CICD-React/static/css/main.69eda509.chunk.css",
-    "main.js": "/webkurs2020-CICD-React/static/js/main.b8df283e.chunk.js",
-    "main.js.map": "/webkurs2020-CICD-React/static/js/main.b8df283e.chunk.js.map",
+    "main.js": "/webkurs2020-CICD-React/static/js/main.c053ad13.chunk.js",
+    "main.js.map": "/webkurs2020-CICD-React/static/js/main.c053ad13.chunk.js.map",
     "runtime-main.js": "/webkurs2020-CICD-React/static/js/runtime-main.89e14c0b.js",
     "runtime-main.js.map": "/webkurs2020-CICD-React/static/js/runtime-main.89e14c0b.js.map",
     "static/css/2.0a5b19c0.chunk.css": "/webkurs2020-CICD-React/static/css/2.0a5b19c0.chunk.css",
-    "static/js/2.23781885.chunk.js": "/webkurs2020-CICD-React/static/js/2.23781885.chunk.js",
-    "static/js/2.23781885.chunk.js.map": "/webkurs2020-CICD-React/static/js/2.23781885.chunk.js.map",
+    "static/js/2.283faaf4.chunk.js": "/webkurs2020-CICD-React/static/js/2.283faaf4.chunk.js",
+    "static/js/2.283faaf4.chunk.js.map": "/webkurs2020-CICD-React/static/js/2.283faaf4.chunk.js.map",
     "index.html": "/webkurs2020-CICD-React/index.html",
-    "precache-manifest.b3696c2cd7f04955748b91367fadc202.js": "/webkurs2020-CICD-React/precache-manifest.b3696c2cd7f04955748b91367fadc202.js",
+    "precache-manifest.97da09272ffed3dace6c55c2085608af.js": "/webkurs2020-CICD-React/precache-manifest.97da09272ffed3dace6c55c2085608af.js",
     "service-worker.js": "/webkurs2020-CICD-React/service-worker.js",
     "static/css/2.0a5b19c0.chunk.css.map": "/webkurs2020-CICD-React/static/css/2.0a5b19c0.chunk.css.map",
     "static/css/main.69eda509.chunk.css.map": "/webkurs2020-CICD-React/static/css/main.69eda509.chunk.css.map",
-    "static/js/2.23781885.chunk.js.LICENSE.txt": "/webkurs2020-CICD-React/static/js/2.23781885.chunk.js.LICENSE.txt",
+    "static/js/2.283faaf4.chunk.js.LICENSE.txt": "/webkurs2020-CICD-React/static/js/2.283faaf4.chunk.js.LICENSE.txt",
+    "static/media/Center.geojson": "/webkurs2020-CICD-React/static/media/Center.da0ecfea.geojson",
     "static/media/letsDoe.geojson": "/webkurs2020-CICD-React/static/media/letsDoe.2235a41f.geojson"
   },
   "entrypoints": [
     "static/js/runtime-main.89e14c0b.js",
     "static/css/2.0a5b19c0.chunk.css",
-    "static/js/2.23781885.chunk.js",
+    "static/js/2.283faaf4.chunk.js",
     "static/css/main.69eda509.chunk.css",
-    "static/js/main.b8df283e.chunk.js"
+    "static/js/main.c053ad13.chunk.js"
   ]
 }
