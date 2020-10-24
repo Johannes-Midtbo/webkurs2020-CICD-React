@@ -42,7 +42,7 @@ const MapboxGLMap = () => {
           map.addLayer({
             id: "kommune-navn",
             type: "symbol",
-            source: "municipalities",
+            source: "kommune",
             layout: {
                 "text-field": "{name}\n",
                 "text-font": ["Droid Sans Regular"],
