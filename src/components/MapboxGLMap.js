@@ -39,6 +39,31 @@ const MapboxGLMap = () => {
           'line-opacity': 1.0
           },
           });
+          map.addLayer({
+            id: "kommune-navn",
+            type: "symbol",
+            source: "municipalities",
+            layout: {
+                "text-field": "{name}\n",
+                "text-font": ["Droid Sans Regular"],
+                "text-size": 12,
+                'symbol-placement': "point"
+            },
+            paint: {
+                "text-color": ["case",
+                    ["boolean", ["feature-state", "hover"], false],
+                    'rgba(255,0,0,0.75)',
+                    'rgba(0,0,0,0.75)'
+                ],
+                "text-halo-color": ["case",
+                    ["boolean", ["feature-state", "hover"], false],
+                    'rgba(255,255,0,0.75)',
+                    'rgba(255,255,255,0.75)'
+                ],
+                "text-halo-width": 2,
+                "text-halo-blur": 0,
+            }
+        });
           console.log(6);
       });
     };
