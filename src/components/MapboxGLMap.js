@@ -62,9 +62,6 @@ const MapboxGLMap = () => {
           id: "kommune-krim",
           type: "circle",
           source: "krim",
-          layout: {
-            'circle': "point"
-        },
           paint: {
               'circle-radius':5,
               'circle-color': '#ff0000'
