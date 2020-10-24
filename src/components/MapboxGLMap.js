@@ -59,7 +59,7 @@ const MapboxGLMap = () => {
           type: "circle",
           source: "kommune",
           layout: {
-              'circle-placement': "point"
+              'circle-placement': "kommune-navn"
           },
           paint: {
               'circle-radius':"{krimStar}\n" ,
