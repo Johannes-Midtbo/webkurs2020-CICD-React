@@ -34,7 +34,7 @@ const MapboxGLMap = () => {
           id: 'polygons',
           type: 'line',
           source: 'kommune',
-          'paint': {
+          paint: {
           'line-color': '#000000',
           'line-opacity': 1.0
           },
@@ -44,7 +44,8 @@ const MapboxGLMap = () => {
             type: "symbol",
             source: "kommune",
             layout: {
-                "text-field": "{name}\n",
+                "text-field": "{navn}\n",
+                "text-font": ["Open Sans Regular"],
                 "text-size": 12,
                 'symbol-placement': "point"
             },
