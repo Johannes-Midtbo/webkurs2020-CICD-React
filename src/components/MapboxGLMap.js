@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
-import geo from "./letsDoe.geojson";
+import geo from "./TroUhav.geojson";
 import center from "./Center.geojson";
 
 
@@ -31,7 +31,7 @@ const MapboxGLMap = () => {
         map.addSource('kommune',{
         type: 'geojson',
         data: geo});
-        map.addSource('krim', {
+        map.addSource('pop', {
           type: 'geojson',
           data: center});
         map.addLayer({
@@ -59,11 +59,11 @@ const MapboxGLMap = () => {
             }
         });
         map.addLayer({
-          id: "kommune-krim",
+          id: "kommune-pop",
           type: "circle",
-          source: "krim",
+          source: "pop",
           paint: {
-              'circle-radius':5,
+              'circle-radius':['get', 'pers'],
               'circle-color': '#ff0000'
           }
       });
