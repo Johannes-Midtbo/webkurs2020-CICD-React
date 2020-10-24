@@ -3,7 +3,7 @@ import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import geo from "./TroUhav.geojson";
 import center from "./Center.geojson";
-import lebels from "./letsDoe.geojson";
+import names from "./letsDoe.geojson";
 
 
 const styles = {
@@ -12,9 +12,6 @@ const styles = {
   position: "absolute"
 };
 
-function rad(persons){
-  return persons/100
-}
 
 const MapboxGLMap = () => {
   const [map, setMap] = useState(null);
@@ -36,9 +33,9 @@ const MapboxGLMap = () => {
         map.addSource('kommune',{
           type: 'geojson',
           data: geo});
-        map.addSource('label',{
-          type: 'geojson',
-          data: labels});
+        map.addSource('thisshit', {
+            type: 'geojson',
+            data: names});
         map.addSource('pop', {
           type: 'geojson',
           data: center});
@@ -49,6 +46,15 @@ const MapboxGLMap = () => {
           paint: {
           'line-color': '#000000',
           'line-opacity': 1.0
+          },
+        });
+        map.addLayer({
+          id: 'noshow',
+          type: 'fill',
+          source: 'kommune',
+          paint: {
+          'fill-opacity': 0.0,
+          
           },
         });
         
@@ -71,7 +77,13 @@ const MapboxGLMap = () => {
           type: "symbol",
           source: "kommune",
           layout: {
-              "text-field": "{navn}",
+              "text-field":[
+                'match',
+                ['get', 'navn'],
+                'null',
+                '',
+                /* other */ ['get', 'navn']
+              ],
               "text-font": ["Open Sans Regular"],
               "text-size": 12,
               'symbol-placement': "point"
@@ -79,18 +91,17 @@ const MapboxGLMap = () => {
           paint: {
               "text-halo-width": 2,
               "text-halo-blur": 0,
-          }
-          
+          } 
         });
 
-        map.on('click', 'kommune-pop', function(e) {
+        map.on('click', 'noshow', function(e) {
             new mapboxgl.Popup()
             .setLngLat(e.lngLat)
             .setHTML("Personer i " + e.features[0].properties.navn+":  "+e.features[0].properties.pers)
             .addTo(map);
         });
         
-        map.on('mouseenter', 'kommune-pop', function() {
+        map.on('mouseenter', 'noshow', function() {
           map.getCanvas().style.cursor = 'pointer';
         });
         
