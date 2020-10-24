@@ -55,7 +55,7 @@ const MapboxGLMap = () => {
             }
         });
         map.addLayer({
-          id: "kommune-navn",
+          id: "kommune-krim",
           type: "circle",
           source: "kommune",
           layout: {
