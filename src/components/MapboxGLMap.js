@@ -89,7 +89,11 @@ const MapboxGLMap = () => {
           source: 'pop',
           paint: {
             "circle-opacity": 0.7,
-              'circle-radius':['/',['sqrt',['/', ['get', 'pers'],3.14]],7],
+              'circle-radius':[
+                'interpolate',["exponential", 2],['zoom'],
+                0, ['/',['sqrt',['/', ['number',['get', 'pers'],2],3.14]],30],
+                8, ['/',['sqrt',['/', ['number',['get', 'pers'],3],3.14]],6],
+              ],
               'circle-color': '#ff0000'
           }
         });
@@ -106,7 +110,11 @@ const MapboxGLMap = () => {
                 /* other */ ['get', 'navn']
               ],
               "text-font": ["Open Sans Regular"],
-              "text-size": 15,
+              "text-size": [
+                'interpolate',["linear"],['zoom'],
+                0, 0,
+                8, 16,
+              ],
               'symbol-placement': "point",
               'text-offset': [0, 1.0],
               'text-anchor': 'top'
@@ -133,6 +141,9 @@ const MapboxGLMap = () => {
         setMap(map);
         map.resize();
         addDataLayer();
+      });
+      map.on('zoom', function(){
+        console.log(map.getZoom());
       });
     };
 
