@@ -1,10 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
-import geo from "./TroUhav.geojson";
 import center from "./Center.geojson";
-import names from "./letsDoe.geojson";
-
+import border from "./ingennull.geojson";
+import nametag from "./CenterKopi.geojson";
 
 const styles = {
   width: "100%",
@@ -30,28 +29,28 @@ const MapboxGLMap = () => {
       map.on("load", () => {
         setMap(map);
         map.resize();
-        map.addSource('kommune',{
+        map.addSource('nameTag',{
           type: 'geojson',
-          data: geo});
-        map.addSource('thisshit', {
-            type: 'geojson',
-            data: names});
+          data: nametag});
         map.addSource('pop', {
           type: 'geojson',
           data: center});
+          map.addSource('border', {
+            type: 'geojson',
+            data: border});
         map.addLayer({
           id: 'polygons',
           type: 'line',
-          source: 'kommune',
+          source: 'border',
           paint: {
           'line-color': '#000000',
-          'line-opacity': 1.0
+          'line-opacity': 0.3
           },
         });
         map.addLayer({
           id: 'noshow',
           type: 'fill',
-          source: 'kommune',
+          source: 'border',
           paint: {
           'fill-opacity': 0.0,
           
@@ -59,23 +58,19 @@ const MapboxGLMap = () => {
         });
         
         map.addLayer({
-          id: "kommune-pop",
-          type: "circle",
-          source: "pop",
+          id: 'kommune-pop',
+          type: 'circle',
+          source: 'pop',
           paint: {
-            "circle-opacity": ["case",
-            ["boolean", ["feature-state", "hover"], false],
-            0.2,
-            0.8
-           ],
-              'circle-radius':['/',['sqrt',['/', ['get', 'pers'],3.14]],8],
+            "circle-opacity": 0.7,
+              'circle-radius':['/',['sqrt',['/', ['get', 'pers'],3.14]],7],
               'circle-color': '#ff0000'
           }
         });
         map.addLayer({
           id: "kommune-navn",
           type: "symbol",
-          source: "kommune",
+          source: "nameTag",
           layout: {
               "text-field":[
                 'match',
@@ -85,11 +80,13 @@ const MapboxGLMap = () => {
                 /* other */ ['get', 'navn']
               ],
               "text-font": ["Open Sans Regular"],
-              "text-size": 12,
-              'symbol-placement': "point"
+              "text-size": 15,
+              'symbol-placement': "point",
+              'text-offset': [0, 1.25],
+              'text-anchor': 'top'
           },
           paint: {
-              "text-halo-width": 2,
+              "text-halo-width": 3,
               "text-halo-blur": 0,
           } 
         });
