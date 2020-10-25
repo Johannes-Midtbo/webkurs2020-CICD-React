@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/webkurs2020-CICD-React/precache-manifest.1873904c2be586fa114581e652800c9e.js"
+  "/webkurs2020-CICD-React/precache-manifest.ca9b6d551f473837ee8e9e7ca356558b.js"
 );
 
 self.addEventListener('message', (event) => {
