@@ -11,28 +11,9 @@ const styles = {
   position: "absolute"
 };
 
-const menuStyle = {
-  position: "absolute",
-  background: "white",
-  padding: 10,
-  zIndex: "1",
-  display: "flex",
-};
 
-const backgroundLayers = [
-  { id: "streets-v11", name: "Streets" },
-  { id: "light-v10", name: "Light" },
-  { id: "dark-v10", name: "Dark" },
-  { id: "satellite-v9", name: "Satellite" },
-];
 
-function sleep(milliseconds) {
-  const date = Date.now();
-  let currentDate = null;
-  do {
-    currentDate = Date.now();
-  } while (currentDate - date < milliseconds);
-}
+
 
 const MapboxGLMap = () => {
   const [map, setMap] = useState(null);
@@ -91,8 +72,8 @@ const MapboxGLMap = () => {
             "circle-opacity": 0.7,
               'circle-radius':[
                 'interpolate',["exponential", 2],['zoom'],
-                0, ['/',['sqrt',['/', ['number',['get', 'pers'],2],3.14]],30],
-                8, ['/',['sqrt',['/', ['number',['get', 'pers'],3],3.14]],6],
+                0, ['/',['sqrt',['/', ['number',['get', 'pers'],2],3.14]],25],
+                12, ['/',['sqrt',['/', ['number',['get', 'pers'],3],3.14]],0.5],
               ],
               'circle-color': '#ff0000'
           }
@@ -141,9 +122,6 @@ const MapboxGLMap = () => {
         setMap(map);
         map.resize();
         addDataLayer();
-      });
-      map.on('zoom', function(){
-        console.log(map.getZoom());
       });
     };
 
