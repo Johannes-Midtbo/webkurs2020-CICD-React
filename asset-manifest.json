@@ -1,21 +1,21 @@
 {
   "files": {
     "main.css": "/webkurs2020-CICD-React/static/css/main.69eda509.chunk.css",
-    "main.js": "/webkurs2020-CICD-React/static/js/main.bda50ecf.chunk.js",
-    "main.js.map": "/webkurs2020-CICD-React/static/js/main.bda50ecf.chunk.js.map",
+    "main.js": "/webkurs2020-CICD-React/static/js/main.49309a9f.chunk.js",
+    "main.js.map": "/webkurs2020-CICD-React/static/js/main.49309a9f.chunk.js.map",
     "runtime-main.js": "/webkurs2020-CICD-React/static/js/runtime-main.89e14c0b.js",
     "runtime-main.js.map": "/webkurs2020-CICD-React/static/js/runtime-main.89e14c0b.js.map",
     "static/css/2.0a5b19c0.chunk.css": "/webkurs2020-CICD-React/static/css/2.0a5b19c0.chunk.css",
     "static/js/2.37d03b02.chunk.js": "/webkurs2020-CICD-React/static/js/2.37d03b02.chunk.js",
     "static/js/2.37d03b02.chunk.js.map": "/webkurs2020-CICD-React/static/js/2.37d03b02.chunk.js.map",
     "index.html": "/webkurs2020-CICD-React/index.html",
-    "precache-manifest.667c94044516cc3b0cb792d30d27c254.js": "/webkurs2020-CICD-React/precache-manifest.667c94044516cc3b0cb792d30d27c254.js",
+    "precache-manifest.1873904c2be586fa114581e652800c9e.js": "/webkurs2020-CICD-React/precache-manifest.1873904c2be586fa114581e652800c9e.js",
     "service-worker.js": "/webkurs2020-CICD-React/service-worker.js",
     "static/css/2.0a5b19c0.chunk.css.map": "/webkurs2020-CICD-React/static/css/2.0a5b19c0.chunk.css.map",
     "static/css/main.69eda509.chunk.css.map": "/webkurs2020-CICD-React/static/css/main.69eda509.chunk.css.map",
     "static/js/2.37d03b02.chunk.js.LICENSE.txt": "/webkurs2020-CICD-React/static/js/2.37d03b02.chunk.js.LICENSE.txt",
     "static/media/Center.geojson": "/webkurs2020-CICD-React/static/media/Center.1f9207cc.geojson",
-    "static/media/CenterKopi.geojson": "/webkurs2020-CICD-React/static/media/CenterKopi.f53ce6da.geojson",
+    "static/media/CenterKopi.geojson": "/webkurs2020-CICD-React/static/media/CenterKopi.34d3f71b.geojson",
     "static/media/ingennull.geojson": "/webkurs2020-CICD-React/static/media/ingennull.49f8fda6.geojson"
   },
   "entrypoints": [
@@ -23,6 +23,6 @@
     "static/css/2.0a5b19c0.chunk.css",
     "static/js/2.37d03b02.chunk.js",
     "static/css/main.69eda509.chunk.css",
-    "static/js/main.bda50ecf.chunk.js"
+    "static/js/main.49309a9f.chunk.js"
   ]
 }
