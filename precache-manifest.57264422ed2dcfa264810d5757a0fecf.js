@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6edcd9caec0efffea3e57003b2b72347",
+    "revision": "f493e0083608ac43a046cd3b15e00c1d",
     "url": "/webkurs2020-CICD-React/index.html"
   },
   {
